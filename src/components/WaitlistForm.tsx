@@ -7,9 +7,10 @@ export default function WaitlistForm() {
   const t = useTranslations("WaitlistForm");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     setError("");
 
@@ -19,7 +20,33 @@ export default function WaitlistForm() {
       return;
     }
 
-    setSubmitted(true);
+    setLoading(true);
+
+    try {
+      const formId = process.env.NEXT_PUBLIC_KIT_FORM_ID;
+      const apiKey = process.env.NEXT_PUBLIC_KIT_API_KEY;
+
+      const res = await fetch(
+        `https://api.convertkit.com/v3/forms/${formId}/subscribe`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ api_key: apiKey, email }),
+        }
+      );
+
+      const data = await res.json();
+
+      if (data.subscription) {
+        setSubmitted(true);
+      } else {
+        setError(data.message || t("error"));
+      }
+    } catch {
+      setError(t("error"));
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (submitted) {
@@ -57,7 +84,8 @@ export default function WaitlistForm() {
             setError("");
           }}
           placeholder={t("placeholder")}
-          className="h-14 w-full rounded-full bg-white/10 px-6 text-text placeholder:text-text-muted outline-none ring-1 ring-white/10 transition-all focus:ring-2 focus:ring-accent-purple focus:shadow-[0_0_30px_rgba(139,92,246,0.3)]"
+          disabled={loading}
+          className="h-14 w-full rounded-full bg-white/10 px-6 text-text placeholder:text-text-muted outline-none ring-1 ring-white/10 transition-all focus:ring-2 focus:ring-accent-purple focus:shadow-[0_0_30px_rgba(139,92,246,0.3)] disabled:opacity-50"
         />
         {error && (
           <p className="mt-1 pl-6 text-sm text-accent-pink">{error}</p>
@@ -65,9 +93,10 @@ export default function WaitlistForm() {
       </div>
       <button
         type="submit"
-        className="h-14 cursor-pointer rounded-full bg-gradient-to-r from-accent-purple via-accent-pink to-accent-orange px-8 font-heading font-bold text-white transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)] active:scale-95"
+        disabled={loading}
+        className="h-14 cursor-pointer rounded-full bg-gradient-to-r from-accent-purple via-accent-pink to-accent-orange px-8 font-heading font-bold text-white transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
       >
-        {t("button")}
+        {loading ? "…" : t("button")}
       </button>
     </form>
   );

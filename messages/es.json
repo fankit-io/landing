@@ -54,7 +54,8 @@
     "button": "¡Quiero participar!",
     "success": "¡Estás en la lista!",
     "successSub": "Te escribiremos pronto.",
-    "invalid": "Ingresa un correo válido"
+    "invalid": "Ingresa un correo válido",
+    "error": "Algo salió mal. Inténtalo de nuevo."
   },
   "Footer": {
     "privacy": "Privacidad",

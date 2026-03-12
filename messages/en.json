@@ -54,7 +54,8 @@
     "button": "Count Me In",
     "success": "You're on the list!",
     "successSub": "We'll reach out soon.",
-    "invalid": "Please enter a valid email"
+    "invalid": "Please enter a valid email",
+    "error": "Something went wrong. Please try again."
   },
   "Footer": {
     "privacy": "Privacy",
