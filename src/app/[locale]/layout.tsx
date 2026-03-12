@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -17,20 +17,38 @@ const inter = Inter({
   weight: ["400", "500", "600"],
 });
 
-export const metadata: Metadata = {
-  title: "Fan Kit — Digital Loyalty & Rewards",
-  description:
-    "Turn Apple Wallet & Google Wallet into your loyalty platform. No app downloads. No friction. Just fans.",
-  openGraph: {
-    title: "Fan Kit — Digital Loyalty & Rewards",
-    description:
-      "Turn Apple Wallet & Google Wallet into your loyalty platform. No app downloads. No friction. Just fans.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  const languages: Record<string, string> = {};
+  for (const l of routing.locales) {
+    languages[l] = `/${l}`;
+  }
+  languages["x-default"] = `/${routing.defaultLocale}`;
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      type: "website",
+      locale,
+    },
+    twitter: {
+      card: "summary_large_image",
+    },
+    alternates: {
+      canonical: `/${locale}`,
+      languages,
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

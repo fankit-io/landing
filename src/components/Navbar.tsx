@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
 
 export default async function Navbar() {
   const t = await getTranslations("Navbar");
@@ -8,7 +7,7 @@ export default async function Navbar() {
     <nav className="fixed top-0 z-50 w-full border-b border-white/5 bg-bg/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="#">
-          <Image src="/fan-kit-logo.svg" alt="Fan Kit" width={120} height={36} />
+          <img src="/fan-kit-logo.svg" alt="Fan Kit" width={120} height={36} />
         </a>
         <a
           href="#waitlist"

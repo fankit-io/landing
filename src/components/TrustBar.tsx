@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
 
 export default async function TrustBar() {
   const t = await getTranslations("TrustBar");
@@ -11,7 +10,7 @@ export default async function TrustBar() {
           {t("worksWith")}
         </span>
         <div className="flex flex-col items-center gap-6 sm:flex-row sm:gap-8">
-          <Image
+          <img
             src="/add-to-apple-wallet.webp"
             alt="Add to Apple Wallet"
             width={200}
@@ -21,7 +20,7 @@ export default async function TrustBar() {
 
           <div className="hidden h-8 w-px bg-white/10 sm:block" />
 
-          <Image
+          <img
             src="/add-to-google-wallet.webp"
             alt="Add to Google Wallet"
             width={200}
