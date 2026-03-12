@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 export default async function Footer() {
   const t = await getTranslations("Footer");
@@ -14,16 +15,19 @@ export default async function Footer() {
           </span>
         </div>
 
-        <div className="flex gap-8 text-sm text-text-muted">
-          <a href="#" className="transition-colors hover:text-text">
-            {t("privacy")}
-          </a>
-          <a href="#" className="transition-colors hover:text-text">
-            {t("terms")}
-          </a>
-          <a href="#" className="transition-colors hover:text-text">
-            {t("contact")}
-          </a>
+        <div className="flex flex-col items-center gap-6 sm:items-end">
+          <div className="flex items-center gap-8 text-sm text-text-muted">
+            <a href="#" className="transition-colors hover:text-text">
+              {t("privacy")}
+            </a>
+            <a href="#" className="transition-colors hover:text-text">
+              {t("terms")}
+            </a>
+            <a href="#" className="transition-colors hover:text-text">
+              {t("contact")}
+            </a>
+          </div>
+          <LocaleSwitcher />
         </div>
       </div>
     </footer>
