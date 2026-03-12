@@ -1,0 +1,65 @@
+{
+  "Navbar": {
+    "waitlist": "Acceso anticipado"
+  },
+  "Hero": {
+    "badge": "Próximamente",
+    "headline": "Fidelización que vive en el celular de tus clientes",
+    "sub": "Fan Kit lleva tu programa de fidelización directo al celular de tus clientes con Apple Wallet y Google Wallet. Sin apps que descargar, sin tarjetas de papel que perder. Solo escanea, guarda y listo.",
+    "cta": "Sé el primero en enterarte del lanzamiento"
+  },
+  "TrustBar": {
+    "worksWith": "Compatible con"
+  },
+  "Features": {
+    "title": "Todo lo que necesitas para que tus clientes vuelvan",
+    "noApp": {
+      "title": "Escanea y listo",
+      "description": "Tus clientes escanean un código QR y ya están dentro. Sin descargar apps, sin formularios — el registro toma segundos."
+    },
+    "engagement": {
+      "title": "Tarjetas digitales, cero desperdicio",
+      "description": "Tus tarjetas de fidelización viven directo en el celular de tus clientes. Sin tarjetas de papel que terminan en la basura."
+    },
+    "location": {
+      "title": "Aparece en su pantalla de bloqueo",
+      "description": "Cuando un cliente está cerca de tu negocio, su pase aparece automáticamente. Un recordatorio amigable de que estás a la vuelta de la esquina."
+    },
+    "realtime": {
+      "title": "Campañas SMS y ofertas",
+      "description": "Envía cupones, promociones y ofertas personalizadas directo a tus clientes por SMS. Directo, simple, efectivo."
+    }
+  },
+  "HowItWorks": {
+    "title": "Cómo funciona",
+    "step1": {
+      "title": "Diseña tu tarjeta",
+      "description": "Crea una tarjeta de fidelización con tu marca, colores y recompensas — toma solo unos minutos."
+    },
+    "step2": {
+      "title": "Comparte un código QR",
+      "description": "Tus clientes lo escanean y guardan tu tarjeta en su celular. Un toque, listo."
+    },
+    "step3": {
+      "title": "Engancha y recompensa",
+      "description": "Registra visitas, envía ofertas por SMS y haz que tus clientes sigan volviendo."
+    }
+  },
+  "WaitlistCTA": {
+    "headline": "¿Listo para modernizar tu programa de fidelización?",
+    "sub": "Regístrate para acceso anticipado y sé de los primeros en comenzar con Fan Kit."
+  },
+  "WaitlistForm": {
+    "placeholder": "Tu correo electrónico",
+    "button": "¡Quiero participar!",
+    "success": "¡Estás en la lista!",
+    "successSub": "Te escribiremos pronto.",
+    "invalid": "Ingresa un correo válido"
+  },
+  "Footer": {
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados."
+  }
+}

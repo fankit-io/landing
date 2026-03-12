@@ -1,0 +1,65 @@
+{
+  "Navbar": {
+    "waitlist": "Get Early Access"
+  },
+  "Hero": {
+    "badge": "Coming Soon",
+    "headline": "Loyalty that lives on your customers' phones",
+    "sub": "Fan Kit brings your loyalty program straight to your customers' phones with Apple Wallet & Google Wallet. No apps to download, no paper cards to lose. Just scan, save, and go.",
+    "cta": "Be the first to know when we launch"
+  },
+  "TrustBar": {
+    "worksWith": "Works with"
+  },
+  "Features": {
+    "title": "Everything you need to keep customers coming back",
+    "noApp": {
+      "title": "Scan & Go",
+      "description": "Customers scan a QR code and they're in. No app downloads, no sign-up forms — onboarding takes seconds."
+    },
+    "engagement": {
+      "title": "Digital cards, zero waste",
+      "description": "Your loyalty cards live right on your customers' phones. No paper punch cards that end up in the trash."
+    },
+    "location": {
+      "title": "Show up on their lock screen",
+      "description": "When a customer is near your business, their pass pops up automatically. A friendly reminder you're right around the corner."
+    },
+    "realtime": {
+      "title": "SMS campaigns & offers",
+      "description": "Send coupons, promotions, and personalized offers straight to your customers via SMS. Direct, simple, effective."
+    }
+  },
+  "HowItWorks": {
+    "title": "How it works",
+    "step1": {
+      "title": "Design your card",
+      "description": "Create a loyalty card with your brand, colors, and rewards — it takes just a few minutes."
+    },
+    "step2": {
+      "title": "Share a QR code",
+      "description": "Customers scan it and save your card to their wallet. One tap, done."
+    },
+    "step3": {
+      "title": "Engage & reward",
+      "description": "Track visits, send offers via SMS, and keep your customers coming back."
+    }
+  },
+  "WaitlistCTA": {
+    "headline": "Ready to modernize your loyalty program?",
+    "sub": "Sign up for early access and be among the first to get started with Fan Kit."
+  },
+  "WaitlistForm": {
+    "placeholder": "Your email address",
+    "button": "Count Me In",
+    "success": "You're on the list!",
+    "successSub": "We'll reach out soon.",
+    "invalid": "Please enter a valid email"
+  },
+  "Footer": {
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}
