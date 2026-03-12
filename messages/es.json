@@ -59,6 +59,7 @@
     "success": "¡Estás en la lista!",
     "successSub": "Te escribiremos pronto.",
     "invalid": "Ingresa un correo válido",
+    "configError": "La lista de espera aún no está configurada. Agrega el ID del formulario y la API key de Kit.",
     "error": "Algo salió mal. Inténtalo de nuevo."
   },
   "Footer": {

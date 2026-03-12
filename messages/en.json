@@ -59,6 +59,7 @@
     "success": "You're on the list!",
     "successSub": "We'll reach out soon.",
     "invalid": "Please enter a valid email",
+    "configError": "Waitlist is not configured yet. Add the Kit form ID and API key.",
     "error": "Something went wrong. Please try again."
   },
   "Footer": {

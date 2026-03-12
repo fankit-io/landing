@@ -14,36 +14,51 @@ export default function WaitlistForm() {
     e.preventDefault();
     setError("");
 
+    const trimmedEmail = email.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(trimmedEmail)) {
       setError(t("invalid"));
+      return;
+    }
+
+    const formId = process.env.NEXT_PUBLIC_KIT_FORM_ID?.trim();
+    const apiKey = process.env.NEXT_PUBLIC_KIT_API_KEY?.trim();
+
+    if (!formId || !apiKey) {
+      setError(t("configError"));
       return;
     }
 
     setLoading(true);
 
     try {
-      const formId = process.env.NEXT_PUBLIC_KIT_FORM_ID;
-      const apiKey = process.env.NEXT_PUBLIC_KIT_API_KEY;
-
       const res = await fetch(
         `https://api.convertkit.com/v3/forms/${formId}/subscribe`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ api_key: apiKey, email }),
+          body: JSON.stringify({ api_key: apiKey, email: trimmedEmail }),
         }
       );
 
-      const data = await res.json();
+      const data = (await res.json()) as {
+        message?: string;
+        subscription?: unknown;
+      };
+
+      if (!res.ok) {
+        throw new Error(data.message || t("error"));
+      }
 
       if (data.subscription) {
         setSubmitted(true);
       } else {
         setError(data.message || t("error"));
       }
-    } catch {
-      setError(t("error"));
+    } catch (submitError) {
+      setError(
+        submitError instanceof Error ? submitError.message : t("error")
+      );
     } finally {
       setLoading(false);
     }
