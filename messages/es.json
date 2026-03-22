@@ -9,7 +9,7 @@
   "Hero": {
     "badge": "Próximamente",
     "headline": "La mejor forma de hacer que tus clientes vuelvan",
-    "sub": "Fan Kit lleva tu programa de fidelización directo al celular de tus clientes con Apple Wallet y Google Wallet. Sin apps que descargar, sin tarjetas de papel que perder. Solo escanea, guarda y listo.",
+    "sub": "Fan Kit lleva tu programa de lealtad directo al celular de tus clientes con Apple Wallet y Google Wallet. Sin apps que descargar, sin tarjetas de papel que perder. Solo escanea, guarda y listo.",
     "cta": "Sé el primero en enterarte del lanzamiento"
   },
   "TrustBar": {
@@ -23,7 +23,7 @@
     },
     "engagement": {
       "title": "Tarjetas digitales, cero desperdicio",
-      "description": "Tus tarjetas de fidelización viven directo en el celular de tus clientes. Sin tarjetas de papel que terminan en la basura."
+      "description": "Tus tarjetas de lealtad viven directo en el celular de tus clientes. Sin tarjetas de papel que terminan en la basura."
     },
     "location": {
       "title": "Aparece en su pantalla de bloqueo",
@@ -38,7 +38,7 @@
     "title": "Cómo funciona",
     "step1": {
       "title": "Diseña tu tarjeta",
-      "description": "Crea una tarjeta de fidelización con tu marca, colores y recompensas — toma solo unos minutos."
+      "description": "Crea una tarjeta de lealtad con tu marca, colores y recompensas — toma solo unos minutos."
     },
     "step2": {
       "title": "Comparte un código QR",
@@ -50,7 +50,7 @@
     }
   },
   "WaitlistCTA": {
-    "headline": "¿Listo para modernizar tu programa de fidelización?",
+    "headline": "¿Listo para modernizar tu programa de lealtad?",
     "sub": "Regístrate para acceso anticipado y sé de los primeros en comenzar con Fan Kit."
   },
   "WaitlistForm": {
